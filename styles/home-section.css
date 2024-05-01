@@ -1,0 +1,68 @@
+.home {
+  padding: 0;
+  min-height: calc(100vh - 6rem);
+  max-width: none;
+  width: 100%;
+}
+
+.home-container {
+  width: 100%;
+  padding: 0 3vw;
+  padding-top: 6rem;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url("../images/home-cover.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home-container h1 {
+  font-size: clamp(5rem, 10vw, 10rem);
+  color: var(--text-color);
+  font-weight: 800;
+}
+
+.home-container h1 span {
+  color: var(--main-color);
+  font-weight: 800;
+}
+
+.home-container h3 {
+  font-size: clamp(1.8rem, 2.8vw, 3rem);
+  margin-top: 4rem;
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.home-buttons a button {
+  margin-top: 3rem;
+  padding: 1rem 2rem;
+}
+
+@media (max-width: 776px) {
+  .home-grid .left-column .text {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .home-grid .left-column .text {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 531px) {
+  .home-grid .left-column .text {
+    font-size: 4rem;
+  }
+}

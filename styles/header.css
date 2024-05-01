@@ -1,0 +1,285 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  background-color: var(--second-bg-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6rem;
+  z-index: 1000;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 1rem;
+}
+
+.logo-container p {
+  font-weight: 900;
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+}
+.logo {
+  height: 3rem;
+  width: 3rem;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.menu {
+  margin: 0 1rem;
+  padding-bottom: 0.35rem;
+  position: relative;
+  font-weight: 500;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  transition: all 0.5s ease;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.menu::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.15rem;
+  background-color: var(--main-color);
+  border-radius: 0.2rem;
+  transition: all 0.5s ease;
+}
+
+.menu:hover {
+  color: var(--main-color);
+}
+
+.menu:hover::before {
+  width: 100%;
+}
+
+.active-menu {
+  color: var(--main-color);
+}
+
+.active-menu::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.15rem;
+  background-color: var(--main-color);
+  border-radius: 0.2rem;
+}
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.right-section i {
+  font-size: 2.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: all 0.5s ease;
+}
+
+.right-section i:hover {
+  color: var(--main-color);
+}
+
+.cart-menu {
+  position: relative;
+}
+
+.cart-quantity {
+  position: absolute;
+  top: -0.8rem;
+  right: -0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  height: 1.8rem;
+  width: 1.8rem;
+}
+
+#hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+#cross {
+  position: absolute;
+  font-size: 4rem;
+  right: 1rem;
+  top: 1rem;
+  color: var(--main-color);
+  display: none;
+  cursor: pointer;
+}
+#cross:hover {
+  color: red;
+}
+
+/* styles when the cart link is hovered */
+.cart-summary {
+  display: none; /* should be revealed when the cart icon is hovered*/
+  position: fixed;
+  top: 8rem;
+  right: 2vw;
+  width: 30rem;
+  max-width: calc(100vw - 4vw);
+  z-index: 100;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: var(--second-bg-color);
+  overflow-y: scroll;
+  transition: all 0 3s ease;
+}
+.cart-summary:hover {
+  display: block;
+}
+
+.cart-summary-title {
+  width: 100%;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.cart-summary-product {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  width: 100%;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cart-summary-image {
+  width: 100%;
+  height: auto;
+}
+
+.cart-summary-image img {
+  width: 100%;
+  height: auto;
+}
+
+.cart-summary-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cart-summary-details p {
+  font-size: 1.2rem;
+}
+
+.cart-summary-details h2 {
+  font-weight: 500;
+}
+
+.buttons {
+  margin-top: 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.cart-total {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.cart-total span {
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+}
+
+.cart-btn {
+  padding: 1rem 3.5rem;
+}
+.checkout-btn {
+  padding: 1rem 2rem;
+}
+
+@media (max-width: 700px) {
+  #hamburger-menu,
+  #cross {
+    display: initial;
+  }
+
+  .nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    padding-top: 6rem;
+    background-color: var(--second-bg-color);
+    width: 25rem;
+    min-height: 50vh;
+    transform: translateX(100%);
+    transition: all 0.5s ease;
+    z-index: 1000;
+  }
+
+  .menu {
+    width: 23rem;
+    display: block;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    border-left: 0.2rem solid var(--main-color);
+    font-size: 1.35rem;
+  }
+
+  .menu:hover::before {
+    display: none;
+  }
+
+  .active-menu::before {
+    display: none;
+  }
+}
+
+.show-menu {
+  transform: translateX(0%);
+  transition: all 0.5s ease;
+}
+
+@media (max-width: 380px) {
+  .logo-container p {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+
+  .right-section {
+    gap: 0.5rem;
+  }
+
+  .right-section i {
+    font-size: 2.2rem;
+  }
+}

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="icons/icon-fav.png" type="image/png" />
+    <title>BiteDrop</title>
+
+    <!-- -----Google Fonts----- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- -----styles----- -->
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/search.css" />
+    <link rel="stylesheet" href="styles/home-section.css" />
+    <link rel="stylesheet" href="styles/special-dishes-section.css" />
+    <link rel="stylesheet" href="styles/about-section.css" />
+    <link rel="stylesheet" href="styles/contact-section.css" />
+
+    <!-- -----Boxicons----- -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <a href="/" class="logo-container">
+          <img class="logo" src="images/logo.png" alt="" />
+          <p>BiteDrop</p>
+        </a>
+
+        <nav>
+          <ul class="nav">
+            <i id="cross" class="cross bx bxs-x-circle"></i>
+            <li>
+              <a href="/#home" class="menu active-menu" id="home-link">Home</a>
+            </li>
+            <li>
+              <a href="menu.html" class="menu" id="menu-link"> Menu </a>
+            </li>
+            <li>
+              <a
+                href="special-dishes.html"
+                class="menu"
+                id="special-dishes-link"
+                >Special Dishes</a
+              >
+            </li>
+            <li><a href="/#about" class="menu" id="about-link">About</a></li>
+            <li>
+              <a href="/#contact" class="menu" id="contact-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="right-section">
+          <i class="search-icon bx bx-search"></i>
+          <a class="cart-menu" href="/cart.html">
+            <i class="cart-icon bx bx-cart"></i>
+
+            <!-- cart quantity showing number of items added to the cart -->
+            <div class="cart-quantity">3</div>
+
+            <!-- cart summary displayed when cart icon is hovered -->
+            <div class="cart-summary">
+              <h3 class="cart-summary-title">Cart (3)</h3>
+              <div class="cart-items">
+                <div class="cart-summary-product">
+                  <div class="cart-summary-image">
+                    <img src="images/burger.png" alt="burger" />
+                  </div>
+                  <div class="cart-summary-details">
+                    <h2>Beef Hamburger</h2>
+                    <h3>$12.00 <span>x 1</span></h3>
+                    <p>Subtotal: $12.00</p>
+                  </div>
+                </div>
+
+                <div class="cart-summary-product">
+                  <div class="cart-summary-image">
+                    <img src="images/fries.png" alt="hamburger" />
+                  </div>
+                  <div class="cart-summary-details">
+                    <h2>Cripsy French Fries</h2>
+                    <h3>$19.75 <span>x 2</span></h3>
+                    <p>Subtotal: $39.50</p>
+                  </div>
+                </div>
+              </div>
+
+              <h2 class="cart-total">Total: <span>$51.50</span></h2>
+
+              <div class="buttons">
+                <a href="/cart.html">
+                  <button class="button-primary cart-btn">Cart</button>
+                </a>
+                <a href="/checkout.html">
+                  <button class="button-primary checkout-btn">Checkout</button>
+                </a>
+              </div>
+            </div>
+          </a>
+          <a href="wishlist.html">
+            <i id="wishlist-icon" class="bx bx-heart"></i>
+          </a>
+          <a href="account.html">
+            <i class="account bx bx-user-circle"></i>
+          </a>
+          <i id="hamburger-menu" class="hamburger-menu bx bx-menu"></i>
+
+          <!-- ----search container which by default is hidden until the search icon is clicked--- -->
+          <div class="search-container">
+            <i id="search-close" class="search-close bx bxs-x-circle"></i>
+            <div class="search-wrapper">
+              <input
+                type="search"
+                class="search-input"
+                placeholder="Search BiteDrop"
+                name="search"
+                id="search"
+              />
+              <button class="search-button button-primary">
+                <i class="search-icon-2 bx bx-search"></i>
+              </button>
+            </div>
+            <div class="recently-searched-container"></div>
+            <div class="search-results">
+              <!-- dynamically add search results here...these are just hard-coded items for testing purposes -->
+              <a class="search-item" href="#">
+                <div class="item-image">
+                  <img src="images/fries.png" alt="hamburger" />
+                </div>
+                <div class="item-details">
+                  <h2>Cripsy French Fries</h2>
+                  <div class="item-prices">
+                    <h3 class="selling-price">$19.75</h3>
+                    <h4 class="marked-price">$15.55</h4>
+                  </div>
+                </div>
+              </a>
+
+              <a class="search-item" href="#">
+                <div class="item-image">
+                  <img src="images/roasted-chicken.png" alt="roasted-chicken" />
+                </div>
+                <div class="item-details">
+                  <h2>Roasted Chicken</h2>
+                  <div class="item-prices">
+                    <h3 class="selling-price">$21.00</h3>
+                    <h4 class="marked-price">$25.00</h4>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="home" id="home">
+        <div class="home-container">
+          <h1 class="home-heading">
+            <span>Meet</span>,Eat & <span>Enjoy</span> The True Taste
+          </h1>
+          <h3 class="home-sub-heading">Life's Too Short For Boring Food</h3>
+          <div class="home-buttons">
+            <a href="menu.html">
+              <button class="button-primary">Explore Menu</button>
+            </a>
+            <a href="#">
+              <button class="button-primary">Book Reservation</button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="special-dishes" id="special-dishes">
+        <h2 class="special-dishes-heading">
+          <span id="heading--animate"> Our Special Dishes </span>
+          <a href="special-dishes.html">
+            <button class="heading-button button-primary">See All</button>
+          </a>
+        </h2>
+
+        <div class="special-dishes-grid">
+          <div class="product hover-animate">
+            <div class="like-container">
+              <i class="heart-outline bx bx-heart"></i>
+            </div>
+            <div class="product-image">
+              <img src="images/fries.png" alt="product-image" />
+            </div>
+            <h5 class="product-name">Cripsy French Fries</h5>
+            <div class="product-prices">
+              <p class="selling-price">$19.75</p>
+              <p class="marked-price">$15.55</p>
+            </div>
+            <div class="buttons-container">
+              <button class="buy button-primary">Buy</button>
+              <button class="cart button-primary">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="product hover-animate">
+            <div class="like-container">
+              <i class="heart-outline bx bx-heart"></i>
+            </div>
+            <div class="product-image">
+              <img src="images/roasted-chicken.png" alt="fried-chicken" />
+            </div>
+            <h5 class="product-name">Roasted Chicken</h5>
+            <div class="product-prices">
+              <p class="selling-price">$21.00</p>
+              <p class="marked-price">$25.00</p>
+            </div>
+            <div class="buttons-container">
+              <button class="buy button-primary">Buy</button>
+              <button class="cart button-primary">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="product hover-animate">
+            <div class="like-container">
+              <i class="heart-outline bx bx-heart"></i>
+            </div>
+            <div class="product-image">
+              <img src="images/burger.png" alt="product-image" />
+            </div>
+            <h5 class="product-name">Beef Hamburger</h5>
+            <div class="product-prices">
+              <p class="selling-price">$12.00</p>
+              <p class="marked-price">$13.00</p>
+            </div>
+            <div class="buttons-container">
+              <button class="buy button-primary">Buy</button>
+              <button class="cart button-primary">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="product hover-animate">
+            <div class="like-container">
+              <i class="heart-outline bx bx-heart"></i>
+            </div>
+            <div class="product-image">
+              <img src="images/pizza.png" alt="product-image" />
+            </div>
+            <h5 class="product-name">Garlic Cheese Pizza</h5>
+            <div class="product-prices">
+              <p class="selling-price">$27.00</p>
+              <p class="marked-price">$30.00</p>
+            </div>
+            <div class="buttons-container">
+              <button class="buy button-primary">Buy</button>
+              <button class="cart button-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="about-title">
+          <h2 id="heading--animate">About Us</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-item hover-animate">
+            <i class="bx bxs-stopwatch"></i>
+            <p class="about-heading">Working Hours</p>
+            <p>8:00 am - 10:00 pm</p>
+          </div>
+
+          <div class="about-item hover-animate">
+            <i class="bx bxs-location-plus"></i>
+            <p class="about-heading">Our Location</p>
+            <p>Broadway, New York</p>
+          </div>
+
+          <div class="about-item hover-animate">
+            <i class="bx bxs-calendar"></i>
+            <p class="about-heading">Our Experience</p>
+            <p id="experience">15+</p>
+          </div>
+        </div>
+
+        <div class="our-mission-container">
+          <div class="featured-image">
+            <img src="images/about.jpg" alt="about-image" />
+          </div>
+          <div class="description">
+            <h2 id="heading--animate">
+              Eat Healthy Food &
+              <span> Enjoy Long Life </span>
+            </h2>
+            <p class="about-description">
+              Experience the joy of nourishing your body while tantalizing your
+              taste buds at our establishment. We believe in the powerful link
+              between what we eat and how we live. Our passionate chefs
+              meticulously craft each dish, prioritizing fresh, nutritious
+              ingredients bursting with flavor and vitality. Indulge in our
+              wholesome creations and embark on a journey towards wellness. With
+              every bite, you're not just satisfying hunger; you're investing in
+              your health and longevity. Join us in embracing the transformative
+              power of healthy eating. Your body will thank you, and your palate
+              will revel in the delicious nourishment of our menu
+            </p>
+          </div>
+        </div>
+
+        <div class="reviews-title">
+          <h2 id="heading--animate">Customer Reviews</h2>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review hover-animate">
+            <div class="review-top">
+              <img
+                class="review-profile"
+                src="images/r1.jpg"
+                alt="customer-img"
+              />
+              <img class="review-rating" src="icons/rating-4.0.png" alt="" />
+            </div>
+            <p class="review-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+              molestias inventore qui maiores. Laboriosam natus perferendis,
+              enim omnis saepe quaerat cumque quia officia nam, nulla quisquam
+              quo ad quis dignissimos.
+            </p>
+            <p class="review-name">~ Bro Code</p>
+          </div>
+
+          <div class="review hover-animate">
+            <div class="review-top">
+              <img
+                class="review-profile"
+                src="images/r2.jpg"
+                alt="customer-img"
+              />
+              <img class="review-rating" src="icons/rating-5.0.png" alt="" />
+            </div>
+            <p class="review-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+              molestias inventore qui maiores. Laboriosam natus perferendis,
+              enim omnis saepe quaerat cumque quia officia nam, nulla quisquam
+              quo ad quis dignissimos.
+            </p>
+            <p class="review-name">~ Mary Cooper</p>
+          </div>
+
+          <div class="review hover-animate">
+            <div class="review-top">
+              <img
+                class="review-profile"
+                src="images/r3.jpg"
+                alt="customer-img"
+              />
+              <img class="review-rating" src="icons/rating-4.0.png" alt="" />
+            </div>
+            <p class="review-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+              molestias inventore qui maiores. Laboriosam natus perferendis,
+              enim omnis saepe quaerat cumque quia officia nam, nulla quisquam
+              quo ad quis dignissimos.
+            </p>
+            <p class="review-name">~ Sheldon Lee</p>
+          </div>
+
+          <div class="review hover-animate">
+            <div class="review-top">
+              <img
+                class="review-profile"
+                src="images/r4.jpeg"
+                alt="customer-img"
+              />
+              <img class="review-rating" src="icons/rating-3.0.png" alt="" />
+            </div>
+            <p class="review-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+              molestias inventore qui maiores. Laboriosam natus perferendis,
+              enim omnis saepe quaerat cumque quia officia nam, nulla quisquam
+              quo ad quis dignissimos.
+            </p>
+            <p class="review-name">~ Anne Woods</p>
+          </div>
+        </div>
+
+        <div class="chefs">
+          <div class="chefs-title">
+            <h2 id="heading--animate">Our Chefs</h2>
+          </div>
+
+          <div class="chefs-subtitle">
+            <h1 id="heading--animate">Meet Our Ultra Skilled Chefs</h1>
+          </div>
+          <div class="chefs-grid">
+            <div class="chefs-image">
+              <img
+                class="background-image"
+                src="images/chefs.jpg"
+                alt="Fallback Image"
+              />
+            </div>
+            <div class="chefs-description">
+              <h2 id="heading--animate" class="chefs-description-heading">
+                Exceptional Food Begins With <span>Exceptional Chefs!</span>
+              </h2>
+              <p class="chefs-text">
+                At BiteDrop, we believe in the transformative power of
+                exceptional chefs. Behind every dish, our culinary artisans
+                blend passion, expertise, and seasonal ingredients to craft
+                extraordinary culinary experiences. From conception to
+                presentation, each creation reflects our chefs' dedication to
+                perfection, igniting your senses on a journey of flavor
+                exploration. Join us and savor the magic where passion meets
+                expertise in every bite.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="contact-title">
+          <h2 id="heading--animate">Contact Us</h2>
+        </div>
+
+        <div>
+          <p class="contact-message">
+            Have a question, feedback, or just craving some deliciousness? We're
+            here for your service! Drop us a line and let's chat about all
+            things food at BiteDrop. Your satisfaction is our top priority.
+          </p>
+        </div>
+
+        <div id="heading--animate" class="social-icons">
+          <i class="bx bxl-whatsapp"></i>
+          <i class="bx bxl-instagram"></i>
+          <i class="bx bxl-facebook-circle"></i>
+          <i class="bx bxl-twitter"></i>
+        </div>
+
+        <div class="contacts">
+          <div id="heading--animate">
+            <i class="bx bxs-location-plus"></i>
+            <p>Broadway, New York</p>
+          </div>
+          <div id="heading--animate">
+            <i class="bx bx-envelope"></i>
+            <p>bitedrop@gmail.com</p>
+          </div>
+          <div id="heading--animate">
+            <i class="bx bxs-phone-call"></i>
+            <p>+1 (800) 555-1212</p>
+          </div>
+        </div>
+
+        <!-- links to download app -->
+        <div class="download-app">
+          <a href="#">
+            <img src="images/f1.png" alt="google play store" />
+          </a>
+          <a href="#">
+            <img src="images/f2.png" alt="app store" />
+          </a>
+        </div>
+
+        <iframe
+          id="map"
+          width="100%"
+          frameborder="0"
+          style="border: 0; margin-top: 2rem; height: 50vh"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3021.1812266839565!2d-73.98542838459427!3d40.75901164727446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1633298938018"
+          allowfullscreen
+        >
+        </iframe>
+        <div class="newsletter">
+          <h3>Our Newsletter</h3>
+          <p>
+            Subscribe to our Newsletter to receive updates on our special offers
+            and new arrivals!
+          </p>
+
+          <div class="inputs">
+            <input
+              type="email"
+              name="email"
+              class="email"
+              placeholder="Email Address"
+            />
+            <button class="subscribe button-primary">Subscribe</button>
+          </div>
+        </div>
+
+        <p id="heading--animate" class="copyright">
+          <i class="bx bx-copyright"></i> 2024 MrRobot
+        </p>
+        <p class="developer">
+          Join us and savor the magic where passion meets expertise in every
+          line of code
+        </p>
+        <p id="heading--animate" class="developer">
+          Designed by <a class="mrrobot-link" href="">MrRobot</a>
+        </p>
+
+        <!-- clicking this button scrolls back to home -->
+        <a href="#home" class="scroll-top button-primary">
+          <i class="scroll-top-arrow bx bx-up-arrow-alt"></i>
+        </a>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="scripts/general.js"></script>
+    <script src="scripts/header.js"></script>
+    <script src="scripts/home.js"></script>
+  </body>
+</html>

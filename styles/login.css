@@ -1,0 +1,157 @@
+.login-top {
+  background-color: var(--main-color);
+  min-height: 50vh;
+  max-width: none;
+}
+
+.login-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -20vh;
+  background-color: var(--bg-color);
+  padding: 2vw;
+  border-radius: 0.5rem;
+  width: 95vw;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 450px;
+  border: 1px solid white;
+  padding: 2vw;
+  border-radius: 0.5rem;
+}
+
+.login-title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+label {
+  display: block;
+  font-size: 1.2rem;
+}
+
+.input-wrapper {
+  display: flex;
+  position: relative;
+  height: fit-content;
+  margin-bottom: 2rem;
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 3rem;
+  border-bottom-left-radius: 5rem;
+  border-top-left-radius: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon i {
+  color: var(--main-color);
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.icon-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-2 i {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+}
+
+#bxs-hide {
+  display: none;
+}
+
+input {
+  height: 3rem;
+  width: 100%;
+  padding-left: 3.5rem;
+  border-radius: 5rem;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  font-weight: 300;
+}
+
+input::placeholder {
+  color: white;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.remember-me {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.checkbox {
+  height: 1.3rem;
+  width: 1.3rem;
+}
+
+.checkbox:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.forgot-password {
+  text-decoration: underline;
+  font-size: 1.2rem;
+}
+
+.forgot-password:hover {
+  color: var(--main-color);
+}
+
+.login-btn {
+  width: 100%;
+  padding: 0.8rem 0;
+  border-radius: 5rem;
+  font-size: 1.2rem;
+}
+
+.login-btn::before {
+  border-radius: 5rem;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.register-link a {
+  color: var(--main-color);
+}
+
+.register-link a:hover {
+  color: white;
+  text-decoration: underline;
+}

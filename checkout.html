@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="icons/icon-fav.png" type="image/png" />
+    <title>Checkout - BiteDrop</title>
+
+    <!-- -----Google Fonts----- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- -----styles----- -->
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/search.css" />
+    <link rel="stylesheet" href="styles/checkout.css" />
+
+    <!-- -----Boxicons----- -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <a href="/" class="logo-container">
+          <img class="logo" src="images/logo.png" alt="" />
+          <p>BiteDrop</p>
+        </a>
+
+        <nav>
+          <ul class="nav">
+            <i id="cross" class="cross bx bxs-x-circle"></i>
+            <li>
+              <a href="/#home" class="menu active-menu" id="home-link">Home</a>
+            </li>
+            <li>
+              <a href="menu.html" class="menu" id="menu-link"> Menu </a>
+            </li>
+            <li>
+              <a
+                href="special-dishes.html"
+                class="menu"
+                id="special-dishes-link"
+                >Special Dishes</a
+              >
+            </li>
+            <li><a href="/#about" class="menu" id="about-link">About</a></li>
+            <li>
+              <a href="/#contact" class="menu" id="contact-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="right-section">
+          <i class="search-icon bx bx-search"></i>
+          <a class="cart-menu" href="/cart.html">
+            <i class="cart-icon bx bx-cart"></i>
+
+            <!-- cart quantity showing number of items added to the cart -->
+            <div class="cart-quantity">3</div>
+
+            <!-- cart summary displayed when cart icon is hovered -->
+            <div class="cart-summary">
+              <h3 class="cart-summary-title">Cart (3)</h3>
+              <div class="cart-items">
+                <div class="cart-summary-product">
+                  <div class="cart-summary-image">
+                    <img src="images/burger.png" alt="burger" />
+                  </div>
+                  <div class="cart-summary-details">
+                    <h2>Beef Hamburger</h2>
+                    <h3>$12.00 <span>x 1</span></h3>
+                    <p>Subtotal: $12.00</p>
+                  </div>
+                </div>
+
+                <div class="cart-summary-product">
+                  <div class="cart-summary-image">
+                    <img src="images/fries.png" alt="hamburger" />
+                  </div>
+                  <div class="cart-summary-details">
+                    <h2>Cripsy French Fries</h2>
+                    <h3>$19.75 <span>x 2</span></h3>
+                    <p>Subtotal: $39.50</p>
+                  </div>
+                </div>
+              </div>
+
+              <h2 class="cart-total">Total: <span>$51.50</span></h2>
+
+              <div class="buttons">
+                <a href="/cart.html">
+                  <button class="button-primary cart-btn">Cart</button>
+                </a>
+                <a href="/checkout.html">
+                  <button class="button-primary checkout-btn">Checkout</button>
+                </a>
+              </div>
+            </div>
+          </a>
+          <a href="wishlist.html">
+            <i id="wishlist-icon" class="bx bx-heart"></i>
+          </a>
+          <a href="account.html">
+            <i class="account bx bx-user-circle"></i>
+          </a>
+          <i id="hamburger-menu" class="hamburger-menu bx bx-menu"></i>
+
+          <!-- ----search container which by default is hidden until the search icon is clicked--- -->
+          <div class="search-container">
+            <i id="search-close" class="search-close bx bxs-x-circle"></i>
+            <div class="search-wrapper">
+              <input
+                type="search"
+                class="search-input"
+                placeholder="Search BiteDrop"
+                name="search"
+                id="search"
+              />
+              <button class="search-button button-primary">
+                <i class="search-icon-2 bx bx-search"></i>
+              </button>
+            </div>
+            <div class="recently-searched-container"></div>
+            <div class="search-results">
+              <!-- dynamically add search results here...these are just hard-coded items for testing purposes -->
+              <a class="search-item" href="#">
+                <div class="item-image">
+                  <img src="images/fries.png" alt="hamburger" />
+                </div>
+                <div class="item-details">
+                  <h2>Cripsy French Fries</h2>
+                  <div class="item-prices">
+                    <h3 class="selling-price">$19.75</h3>
+                    <h4 class="marked-price">$15.55</h4>
+                  </div>
+                </div>
+              </a>
+
+              <a class="search-item" href="#">
+                <div class="item-image">
+                  <img src="images/roasted-chicken.png" alt="roasted-chicken" />
+                </div>
+                <div class="item-details">
+                  <h2>Roasted Chicken</h2>
+                  <div class="item-prices">
+                    <h3 class="selling-price">$21.00</h3>
+                    <h4 class="marked-price">$25.00</h4>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="checkout-top">
+        <h1 class="checkout-title">Checkout</h1>
+      </section>
+      <section class="checkout">
+        <div class="coupon">
+          <div class="visible">
+            <i class="bell bx bx-bell"></i>
+            Have a coupon?
+            <p>Click here to enter your code</p>
+          </div>
+
+          <!-- initially hide the coupon input section -->
+          <div class="hidden">
+            <input type="text" placeholder="Coupon Code" />
+            <button class="button-primary">Apply Coupon</button>
+          </div>
+        </div>
+
+        <div class="checkout-grid">
+          <!-- billing details section -->
+          <div class="billing-details">
+            <h2>Billing Details</h2>
+
+            <label for="first-tname">Firt Name <span>*</span> </label>
+            <input type="text" placeholder="First Name" name="first-name" />
+
+            <label for="last-name">Last Name <span>*</span></label>
+            <input type="text" placeholder="Last Name" name="last-name" />
+
+            <label for="country">Country / Region <span>*</span></label>
+            <input type="text" placeholder="Country/Region" name="country" />
+
+            <label for="street-address">Street Address <span>*</span></label>
+            <input
+              type="text"
+              placeholder="Street Address"
+              name="street-address"
+            />
+
+            <label for="town">Town / City <span>*</span></label>
+            <input type="text" placeholder="Town/City" name="town" />
+
+            <label for="state">State / County <span>*</span></label>
+            <input type="text" placeholder="State/County" name="state" />
+
+            <label for="postcode">Postcode / ZIP <span>*</span></label>
+            <input type="text" placeholder="Postcode/ZIP" name="postcode" />
+
+            <label for="phone">Phone <span>*</span></label>
+            <input type="text" placeholder="Phone" name="phone" />
+
+            <label for="email">Email Address <span>*</span></label>
+            <input type="email" placeholder="Email Address" name="email" />
+
+            <button class="button-primary">Submit</button>
+          </div>
+
+          <!-- order summary section -->
+          <div class="order-summary">
+            <h2>Order Summary</h2>
+            <div class="item">
+              <p>Beef Hamburger x 1</p>
+              <p>$12.00</p>
+            </div>
+            <div class="item">
+              <p>Cripsy Frech Fries x 2</p>
+              <p>$39.50</p>
+            </div>
+            <div class="subtotal">
+              <p>Subtotal:</p>
+              <p>$ 51.50</p>
+            </div>
+            <div class="shipping">
+              <p>Shipping:</p>
+              <p>$ 4.99</p>
+            </div>
+            <div class="tax">
+              <p>Tax:</p>
+              <p>$ 5.65</p>
+            </div>
+            <div class="total">
+              <p>Total:</p>
+              <p>$ 62.14</p>
+            </div>
+
+            <p class="privacy-policy">
+              Your personal data will be used to process your order, support
+              your experience throughout this website, and for other purposes
+              described in our
+              <a class="privacy-policy-link" href="#privacy-policy">
+                Privacy Policy
+              </a>
+            </p>
+
+            <div class="terms-and-conditions">
+              <input type="checkbox" />
+              <p>
+                I have read and agreed to the website
+                <a href="#terms-and-conditions">Terms & Conditions</a>
+              </p>
+            </div>
+
+            <div class="payment-buttons">
+              <!-------Add Payment Options Here------->
+              <button class="payment-btn button-primary">
+                Payment Option 1
+              </button>
+              <button class="payment-btn button-primary">
+                Payment Option 2
+              </button>
+              <button class="payment-btn button-primary">
+                Payment Option 3
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="scripts/general.js"></script>
+    <script src="scripts/header.js"></script>
+    <script src="scripts/checkout.js"></script>
+  </body>
+</html>

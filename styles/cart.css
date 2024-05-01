@@ -1,0 +1,177 @@
+.cart-top {
+  min-height: 50vh;
+  background-color: var(--main-color);
+  max-width: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-container {
+  padding: 2vw;
+  background-color: var(--bg-color);
+  margin-top: -10vh;
+  border-radius: 0.5rem;
+  width: 95vw;
+}
+
+.cart-title {
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.cart-grid {
+  display: grid;
+  grid-template-columns: 1fr 50%;
+}
+
+/* cart items */
+
+.product {
+  display: flex;
+  width: 100%;
+  margin-bottom: 4rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed var(--text-color);
+}
+
+.image {
+  height: fit-content;
+  /* width: clamp(6rem,15%,15rem); */
+  width: 10rem;
+}
+
+.image img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.details {
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.details h2 {
+  padding: 1rem 0;
+}
+
+.update-buttons {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 13rem;
+}
+
+.plus,
+.minus,
+.trash {
+  font-size: 2rem;
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+.quantity {
+  color: var(--text-color);
+  font-size: 1.5rem;
+}
+
+.trash {
+  color: darkred;
+}
+
+.details .p-subtotal {
+  font-size: 1.15rem;
+}
+
+/* coupon code */
+.coupon-container {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  gap: 1rem;
+}
+
+.coupon-input {
+  width: 50%;
+  height: 3.2rem;
+  border-radius: 0.5rem;
+  border: none;
+  padding-left: 1rem;
+  color: black;
+  font-size: 1.2rem;
+}
+
+.coupon-input:focus {
+  outline: none;
+  box-shadow: 0.1px 0.1px 4px 0.5px var(--main-color);
+}
+
+.coupon-btn {
+  padding: 1rem;
+}
+
+/* payment summary */
+
+.payment-summary {
+  margin-left: 2rem;
+  padding: 1rem;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  border-radius: 0.5rem;
+  border: 1px solid var(--text-color);
+}
+
+.subtotal,
+.shipping,
+.tax,
+.total {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.total {
+  border-top: 1px dashed var(--text-color);
+  margin-top: 2rem;
+}
+.total p {
+  color: var(--main-color);
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.payment-summary a {
+  width: 100%;
+}
+
+.checkout-button {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* responsive design */
+
+@media (max-width: 700px) {
+  .cart-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-summary {
+    grid-row: 1;
+    width: 100%;
+    margin: 0 0 5rem 0;
+  }
+}

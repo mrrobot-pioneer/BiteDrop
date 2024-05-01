@@ -1,0 +1,201 @@
+.about {
+  min-height: 100vh;
+}
+
+.about-title {
+  width: 100%;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.about-title h2 {
+  color: var(--main-color);
+}
+
+.about-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: clamp(1rem, 2vw, 2.5rem);
+  place-content: center;
+}
+
+.about-item {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.5rem;
+  background-color: var(--second-bg-color);
+}
+
+.about-heading {
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+.about-item i {
+  color: var(--main-color);
+  font-size: 3rem;
+}
+
+.about-item p {
+  margin-top: 0.5rem;
+}
+
+#experience {
+  font-size: 4rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.our-mission-container {
+  margin: 5rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2vw;
+}
+
+.featured-image {
+  width: 100%;
+  height: auto;
+}
+
+.featured-image img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: inherit;
+}
+
+.our-mission-container .description {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.our-mission-container .description h2 {
+  font-size: clamp(25px, 3vw, 33px);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.our-mission-container .description h2 span {
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+.our-mission-container .description p {
+  max-width: 100%;
+}
+
+/* styling reviews */
+.reviews-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.reviews-title h2 {
+  color: var(--main-color);
+}
+
+.reviews-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2vw;
+}
+
+.review {
+  width: inherit;
+  font-size: 1.1rem;
+  padding: 1rem;
+  background-color: var(--second-bg-color);
+  border-radius: 0.5rem;
+}
+
+.review-top {
+  display: flex;
+  align-items: center;
+}
+
+.review-profile {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.review-rating {
+  height: 1.5rem;
+  margin-left: 1rem;
+}
+
+.review-body {
+  margin: 1rem 0;
+  font-size: 1.15rem;
+}
+
+.review-name {
+  text-align: end;
+  color: var(--main-color);
+}
+
+/* chefs section */
+.chefs {
+  margin-top: 5rem;
+}
+
+.chefs-title,
+.chefs-subtitle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.chefs-title h2 {
+  color: var(--main-color);
+}
+
+.chefs-subtitle {
+  color: var(--text-color);
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.chefs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2vw;
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.chefs-image {
+  width: 100%;
+}
+
+.chefs-image img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: inherit;
+}
+
+.chefs-description-heading {
+  font-size: clamp(25px, 3vw, 33px);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.chefs-description-heading span {
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+.chefs-description p {
+  max-width: 100%;
+}

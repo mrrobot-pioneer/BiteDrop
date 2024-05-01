@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="icons/icon-fav.png" type="image/png" />
+    <title>Menu - BiteDrop</title>
+
+    <!-- -----Google Fonts----- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- -----styles----- -->
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/search.css" />
+    <link rel="stylesheet" href="styles/menu.css" />
+
+    <!-- -----Boxicons----- -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <a href="/" class="logo-container">
+          <img class="logo" src="images/logo.png" alt="" />
+          <p>BiteDrop</p>
+        </a>
+
+        <nav>
+          <ul class="nav">
+            <i id="cross" class="cross bx bxs-x-circle"></i>
+            <li>
+              <a href="/#home" class="menu active-menu" id="home-link">Home</a>
+            </li>
+            <li>
+              <a href="menu.html" class="menu" id="menu-link"> Menu </a>
+            </li>
+            <li>
+              <a
+                href="special-dishes.html"
+                class="menu"
+                id="special-dishes-link"
+                >Special Dishes</a
+              >
+            </li>
+            <li><a href="/#about" class="menu" id="about-link">About</a></li>
+            <li>
+              <a href="/#contact" class="menu" id="contact-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="right-section">
+          <i class="search-icon bx bx-search"></i>
+          <a class="cart-menu" href="/cart.html">
+            <i class="cart-icon bx bx-cart"></i>
+
+            <!-- cart quantity showing number of items added to the cart -->
+            <div class="cart-quantity">3</div>
+
+            <!-- cart summary displayed when cart icon is hovered -->
+            <div class="cart-summary">
+              <h3 class="cart-summary-title">Cart (3)</h3>
+              <div class="cart-items">
+                <div class="cart-summary-product">
+                  <div class="cart-summary-image">
+                    <img src="images/burger.png" alt="burger" />
+                  </div>
+                  <div class="cart-summary-details">
+                    <h2>Beef Hamburger</h2>
+                    <h3>$12.00 <span>x 1</span></h3>
+                    <p>Subtotal: $12.00</p>
+                  </div>
+                </div>
+
+                <div class="cart-summary-product">
+                  <div class="cart-summary-image">
+                    <img src="images/fries.png" alt="hamburger" />
+                  </div>
+                  <div class="cart-summary-details">
+                    <h2>Cripsy French Fries</h2>
+                    <h3>$19.75 <span>x 2</span></h3>
+                    <p>Subtotal: $39.50</p>
+                  </div>
+                </div>
+              </div>
+
+              <h2 class="cart-total">Total: <span>$51.50</span></h2>
+
+              <div class="buttons">
+                <a href="/cart.html">
+                  <button class="button-primary cart-btn">Cart</button>
+                </a>
+                <a href="/checkout.html">
+                  <button class="button-primary checkout-btn">Checkout</button>
+                </a>
+              </div>
+            </div>
+          </a>
+          <a href="wishlist.html">
+            <i id="wishlist-icon" class="bx bx-heart"></i>
+          </a>
+          <a href="account.html">
+            <i class="account bx bx-user-circle"></i>
+          </a>
+          <i id="hamburger-menu" class="hamburger-menu bx bx-menu"></i>
+
+          <!-- ----search container which by default is hidden until the search icon is clicked--- -->
+          <div class="search-container">
+            <i id="search-close" class="search-close bx bxs-x-circle"></i>
+            <div class="search-wrapper">
+              <input
+                type="search"
+                class="search-input"
+                placeholder="Search BiteDrop"
+                name="search"
+                id="search"
+              />
+              <button class="search-button button-primary">
+                <i class="search-icon-2 bx bx-search"></i>
+              </button>
+            </div>
+            <div class="recently-searched-container"></div>
+            <div class="search-results">
+              <!-- dynamically add search results here...these are just hard-coded items for testing purposes -->
+              <a class="search-item" href="#">
+                <div class="item-image">
+                  <img src="images/fries.png" alt="hamburger" />
+                </div>
+                <div class="item-details">
+                  <h2>Cripsy French Fries</h2>
+                  <div class="item-prices">
+                    <h3 class="selling-price">$19.75</h3>
+                    <h4 class="marked-price">$15.55</h4>
+                  </div>
+                </div>
+              </a>
+
+              <a class="search-item" href="#">
+                <div class="item-image">
+                  <img src="images/roasted-chicken.png" alt="roasted-chicken" />
+                </div>
+                <div class="item-details">
+                  <h2>Roasted Chicken</h2>
+                  <div class="item-prices">
+                    <h3 class="selling-price">$21.00</h3>
+                    <h4 class="marked-price">$25.00</h4>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="menu-top">
+        <h2 class="menu-title">Our Menu</h2>
+      </section>
+      <section class="menu-container">
+        <div class="menu-items">
+          <!-- place order section -->
+          <div class="place-order">
+            <p class="place-order-link">Place Order ></p>
+            <div class="place-order-details hidden">
+              <input
+                type="text"
+                class="order-item"
+                name="order-item"
+                placeholder="Item Name"
+              />
+              <input
+                type="number"
+                name="order-quantity"
+                class="order-quantity"
+                placeholder="Quantity"
+                min="1"
+              />
+              <button class="button-primary place-order-btn">
+                Place Order
+              </button>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="text">
+              <h2>Main Dish</h2>
+              <div class="row">
+                <p class="item">Chicken Wings</p>
+                <p class="dotted"></p>
+                <p class="price">$10</p>
+              </div>
+              <div class="row">
+                <p class="item">Prawn Cocktail</p>
+                <p class="dotted"></p>
+                <p class="price">$20</p>
+              </div>
+              <div class="row">
+                <p class="item">Rice Beef</p>
+                <p class="dotted"></p>
+                <p class="price">$30</p>
+              </div>
+              <div class="row">
+                <p class="item">Rice Veges</p>
+                <p class="dotted"></p>
+                <p class="price">$50</p>
+              </div>
+            </div>
+            <div class="image-container">
+              <img src="images/main-dish.png" alt="main-dish" />
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="image-container alt">
+              <img src="images/desserts.png" alt="desserts" />
+            </div>
+            <div class="text">
+              <h2>Desserts</h2>
+              <div class="row">
+                <p class="item">Panna Cotta</p>
+                <p class="dotted"></p>
+                <p class="price">$10</p>
+              </div>
+              <div class="row">
+                <p class="item">Chocolate Cake</p>
+                <p class="dotted"></p>
+                <p class="price">$20</p>
+              </div>
+              <div class="row">
+                <p class="item">Ice Cream</p>
+                <p class="dotted"></p>
+                <p class="price">$30</p>
+              </div>
+              <div class="row">
+                <p class="item">Lemon Cake</p>
+                <p class="dotted"></p>
+                <p class="price">$50</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="text">
+              <h2>Drinks</h2>
+              <div class="row">
+                <p class="item">Cocacola Drinks</p>
+                <p class="dotted"></p>
+                <p class="price">$2</p>
+              </div>
+              <div class="row">
+                <p class="item">Delmonte</p>
+                <p class="dotted"></p>
+                <p class="price">$5</p>
+              </div>
+              <div class="row">
+                <p class="item">Quencher</p>
+                <p class="dotted"></p>
+                <p class="price">$3</p>
+              </div>
+              <div class="row">
+                <p class="item">Energy Drink</p>
+                <p class="dotted"></p>
+                <p class="price">$4</p>
+              </div>
+            </div>
+            <div class="image-container">
+              <img src="images/drinks.png" alt="drinks" />
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="image-container alt">
+              <img src="images/cocktails.png" alt="cocktails" />
+            </div>
+            <div class="text">
+              <h2>Cocktails</h2>
+              <div class="row">
+                <p class="item">Margarita</p>
+                <p class="dotted"></p>
+                <p class="price">$10</p>
+              </div>
+              <div class="row">
+                <p class="item">Negroni</p>
+                <p class="dotted"></p>
+                <p class="price">$20</p>
+              </div>
+              <div class="row">
+                <p class="item">Aperol Spritz</p>
+                <p class="dotted"></p>
+                <p class="price">$30</p>
+              </div>
+              <div class="row">
+                <p class="item">Daiquiri</p>
+                <p class="dotted"></p>
+                <p class="price">$50</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="text">
+              <h2>Fish & Meat</h2>
+              <div class="row">
+                <p class="item">Roasted Chicken</p>
+                <p class="dotted"></p>
+                <p class="price">$12</p>
+              </div>
+              <div class="row">
+                <p class="item">Salmon Fillett</p>
+                <p class="dotted"></p>
+                <p class="price">$20</p>
+              </div>
+              <div class="row">
+                <p class="item">Fried Chicken</p>
+                <p class="dotted"></p>
+                <p class="price">$35</p>
+              </div>
+              <div class="row">
+                <p class="item">Creamy Fish</p>
+                <p class="dotted"></p>
+                <p class="price">$50</p>
+              </div>
+            </div>
+            <div class="image-container">
+              <img src="images/fish.png" alt="meat" />
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="image-container alt">
+              <img src="images/salads.png" alt="salads" />
+            </div>
+            <div class="text">
+              <h2>Salads</h2>
+              <div class="row">
+                <p class="item">Greek Salad</p>
+                <p class="dotted"></p>
+                <p class="price">$10</p>
+              </div>
+              <div class="row">
+                <p class="item">Beef Salad</p>
+                <p class="dotted"></p>
+                <p class="price">$22</p>
+              </div>
+              <div class="row">
+                <p class="item">Mix Salad</p>
+                <p class="dotted"></p>
+                <p class="price">$30</p>
+              </div>
+              <div class="row">
+                <p class="item">Sweet Potato Salad</p>
+                <p class="dotted"></p>
+                <p class="price">$50</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="text">
+              <h2>Fruits & Vegetables</h2>
+              <div class="row">
+                <p class="item">Apples</p>
+                <p class="dotted"></p>
+                <p class="price">$0.5</p>
+              </div>
+              <div class="row">
+                <p class="item">Pineapples</p>
+                <p class="dotted"></p>
+                <p class="price">$0.8</p>
+              </div>
+              <div class="row">
+                <p class="item">Fried Cabbage & Carrots</p>
+                <p class="dotted"></p>
+                <p class="price">$3</p>
+              </div>
+              <div class="row">
+                <p class="item">Kales</p>
+                <p class="dotted"></p>
+                <p class="price">$50</p>
+              </div>
+              <div class="row">
+                <p class="item">Mangoes</p>
+                <p class="dotted"></p>
+                <p class="price">$0.4</p>
+              </div>
+            </div>
+            <div class="image-container">
+              <img src="images/veges.png" alt="fruits-veges" />
+            </div>
+          </div>
+
+          <!-- add more menu items here -->
+        </div>
+
+        <p class="welcome">- - - Welcome All - - -</p>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="scripts/general.js"></script>
+    <script src="scripts/header.js"></script>
+    <script src="scripts/menu.js"></script>
+  </body>
+</html>

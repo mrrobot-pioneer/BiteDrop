@@ -1,0 +1,140 @@
+.menu-top {
+  background-color: var(--main-color);
+  max-width: none;
+  min-height: 50vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-container {
+  padding: 2vw;
+  margin-top: -10vh;
+  background-color: var(--bg-color);
+  border-radius: 0.5rem;
+  width: 95vw;
+  max-width: 900px;
+}
+
+.menu-title {
+  width: 100%;
+  text-align: center;
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+.menu .menu-items {
+  padding-top: 5rem;
+}
+
+.place-order {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
+.place-order p {
+  font-size: 1.2rem;
+  text-decoration: underline;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
+.place-order-details {
+  width: 100%;
+}
+
+.place-order-details input {
+  padding: 0.6rem;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.place-order-btn {
+  margin-top: 1.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.menu-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2vw;
+  height: fit-content;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  border-top: 1px dashed var(--main-color);
+  padding-top: 1.5rem;
+}
+
+.text {
+  width: 100%;
+}
+
+.text h2 {
+  font-size: 1.3rem;
+  background-color: var(--main-color);
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  text-align: end;
+  border-radius: 0.5rem;
+  width: fit-content;
+}
+.row {
+  width: 100%;
+  padding: 0.3rem 0;
+  font-size: clamp(12px, 3vw, 1.2rem);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 1vw;
+}
+
+.image-container {
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.alt {
+  justify-content: start;
+}
+
+.image-container img {
+  height: 13rem;
+  aspect-ratio: 2/1.4;
+  object-fit: cover;
+  object-position: center;
+}
+
+.dotted {
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+  height: 0;
+  margin: auto 0;
+}
+
+.welcome {
+  margin-top: 3rem;
+  font-weight: 500;
+  font-style: italic;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 500px) {
+  .image-container img {
+    height: 28vw;
+    max-height: 12rem;
+  }
+}

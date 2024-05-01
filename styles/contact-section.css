@@ -1,0 +1,173 @@
+.contact-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-title h2 {
+  color: var(--main-color);
+}
+
+.contact-message {
+  max-width: 500px;
+  margin: 1.5rem auto 0 auto;
+  text-align: center;
+}
+
+.social-icons {
+  width: fit-content;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.social-icons i {
+  margin: 0 0.5rem;
+}
+
+.social-icons i {
+  font-size: 2.5rem;
+  color: var(--main-color);
+  transition: all 0.5s;
+}
+
+.social-icons i:hover {
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.contacts {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contacts div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contacts div p {
+  font-size: 1.3rem;
+}
+
+.contacts div i {
+  font-size: 2rem;
+  color: var(--main-color);
+}
+
+.download-app {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.download-app img {
+  height: 3rem;
+  margin: 1rem 1rem 0 1rem;
+  transition: all 0.5s;
+}
+
+.download-app img:hover {
+  scale: 1.1;
+}
+
+.newsletter {
+  width: 100%;
+  padding: 3rem 1rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  background-image: url("../images/newsletter-cover.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.newsletter h3 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--bg-color);
+}
+
+.newsletter p {
+  color: var(--bg-color);
+  font-weight: 600;
+  text-align: center;
+}
+
+.inputs {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.email {
+  height: 2.85rem;
+  width: 80%;
+  max-width: 300px;
+  padding-left: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  color: black;
+  /* margin: 1rem 1.5rem 0 0; */
+}
+
+.subscribe {
+  margin-top: 1rem;
+  padding: 0.7rem 1rem;
+}
+
+.developer,
+.copyright {
+  text-align: center;
+  margin: 1rem auto 0 auto;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.bx-copyright {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+.mrrobot-link {
+  color: var(--main-color);
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  display: none; /* this button will be made visible on scroll*/
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-top::before {
+  border-radius: 50%;
+}
+
+.scroll-top-arrow {
+  font-size: 2.5rem;
+}

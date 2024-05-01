@@ -1,0 +1,93 @@
+.special-dishes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: clamp(1rem, 2vw, 2.5rem);
+}
+
+.special-dishes-heading {
+  width: 100%;
+  text-align: center;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.special-dishes-heading span {
+  color: var(--main-color);
+}
+
+.heading-button {
+  margin-left: 1.5rem;
+}
+
+.product {
+  width: 100%;
+  background-color: var(--second-bg-color);
+  border-radius: 0.5rem;
+  padding: 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.like-container {
+  width: 100%;
+  height: fit-content;
+  padding-bottom: 0.4rem;
+}
+
+.like-container i {
+  font-size: 2.2rem;
+  color: var(--main-color);
+}
+
+.product-image {
+  height: fit-content;
+  width: 100%;
+  overflow: hidden; /*to prevent the img from overflowing on hover...since we have a scale of 1.1 on hover*/
+}
+
+.product-image img {
+  width: 100%;
+  height: auto; /*let the height be auto to prevent the img from losing its shape since the width is fixed*/
+  transition: all 0.5s;
+}
+
+.product-image img:hover {
+  scale: 1.1;
+}
+
+.product-name {
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.product-prices {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0 1.2rem 0;
+}
+
+.selling-price {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.marked-price {
+  font-size: 1.2rem;
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.buy {
+  padding: 0.5rem 1.5rem;
+}

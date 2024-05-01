@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="icons/icon-fav.png" type="image/png" />
+    <title>Orders - BiteDrop</title>
+
+    <!-- -----Google Fonts----- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- -----styles----- -->
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/search.css" />
+    <link rel="stylesheet" href="styles/orders.css" />
+
+    <!-- -----Boxicons----- -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <a href="/" class="logo-container">
+          <img class="logo" src="images/logo.png" alt="" />
+          <p>BiteDrop</p>
+        </a>
+
+        <nav>
+          <ul class="nav">
+            <i id="cross" class="cross bx bxs-x-circle"></i>
+            <li>
+              <a href="/#home" class="menu active-menu" id="home-link">Home</a>
+            </li>
+            <li>
+              <a href="menu.html" class="menu" id="menu-link"> Menu </a>
+            </li>
+            <li>
+              <a
+                href="special-dishes.html"
+                class="menu"
+                id="special-dishes-link"
+                >Special Dishes</a
+              >
+            </li>
+            <li><a href="/#about" class="menu" id="about-link">About</a></li>
+            <li>
+              <a href="/#contact" class="menu" id="contact-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="right-section">
+          <i class="search-icon bx bx-search"></i>
+          <a class="cart-menu" href="/cart.html">
+            <i class="cart-icon bx bx-cart"></i>
+
+            <!-- cart quantity showing number of items added to the cart -->
+            <div class="cart-quantity">3</div>
+
+            <!-- cart summary displayed when cart icon is hovered -->
+            <div class="cart-summary">
+              <h3 class="cart-summary-title">Cart (3)</h3>
+              <div class="cart-items">
+                <div class="cart-summary-product">
+                  <div class="cart-summary-image">
+                    <img src="images/burger.png" alt="burger" />
+                  </div>
+                  <div class="cart-summary-details">
+                    <h2>Beef Hamburger</h2>
+                    <h3>$12.00 <span>x 1</span></h3>
+                    <p>Subtotal: $12.00</p>
+                  </div>
+                </div>
+
+                <div class="cart-summary-product">
+                  <div class="cart-summary-image">
+                    <img src="images/fries.png" alt="hamburger" />
+                  </div>
+                  <div class="cart-summary-details">
+                    <h2>Cripsy French Fries</h2>
+                    <h3>$19.75 <span>x 2</span></h3>
+                    <p>Subtotal: $39.50</p>
+                  </div>
+                </div>
+              </div>
+
+              <h2 class="cart-total">Total: <span>$51.50</span></h2>
+
+              <div class="buttons">
+                <a href="/cart.html">
+                  <button class="button-primary cart-btn">Cart</button>
+                </a>
+                <a href="/checkout.html">
+                  <button class="button-primary checkout-btn">Checkout</button>
+                </a>
+              </div>
+            </div>
+          </a>
+          <a href="wishlist.html">
+            <i id="wishlist-icon" class="bx bx-heart"></i>
+          </a>
+          <a href="account.html">
+            <i class="account bx bx-user-circle"></i>
+          </a>
+          <i id="hamburger-menu" class="hamburger-menu bx bx-menu"></i>
+
+          <!-- ----search container which by default is hidden until the search icon is clicked--- -->
+          <div class="search-container">
+            <i id="search-close" class="search-close bx bxs-x-circle"></i>
+            <div class="search-wrapper">
+              <input
+                type="search"
+                class="search-input"
+                placeholder="Search BiteDrop"
+                name="search"
+                id="search"
+              />
+              <button class="search-button button-primary">
+                <i class="search-icon-2 bx bx-search"></i>
+              </button>
+            </div>
+            <div class="recently-searched-container"></div>
+            <div class="search-results">
+              <!-- dynamically add search results here...these are just hard-coded items for testing purposes -->
+              <a class="search-item" href="#">
+                <div class="item-image">
+                  <img src="images/fries.png" alt="hamburger" />
+                </div>
+                <div class="item-details">
+                  <h2>Cripsy French Fries</h2>
+                  <div class="item-prices">
+                    <h3 class="selling-price">$19.75</h3>
+                    <h4 class="marked-price">$15.55</h4>
+                  </div>
+                </div>
+              </a>
+
+              <a class="search-item" href="#">
+                <div class="item-image">
+                  <img src="images/roasted-chicken.png" alt="roasted-chicken" />
+                </div>
+                <div class="item-details">
+                  <h2>Roasted Chicken</h2>
+                  <div class="item-prices">
+                    <h3 class="selling-price">$21.00</h3>
+                    <h4 class="marked-price">$25.00</h4>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="orders-top">
+        <h2 class="orders-title">Orders</h2>
+      </section>
+      <section class="orders">
+        <div class="order">
+          <div class="order-details">
+            <div>
+              Order Placed:
+              <span>3 Mar, 2024</span>
+            </div>
+            <div class="order-total">
+              Order Total:
+              <span>$35.06</span>
+            </div>
+            <div>
+              Order Id:
+              <span>27dd-f5gg-j7k3-a34c-km4q-p2kcv</span>
+            </div>
+          </div>
+          <div class="order-items">
+            <div class="order-item">
+              <div class="order-item-image">
+                <img src="images/hamburger.jpg" alt="hamburger" />
+              </div>
+              <div class="order-item-details">
+                <h2>Beef Hamburger</h2>
+                <p>Arriving on: 5 Mar, 2024</p>
+                <p>$12.00 <span class="order-quantity">Qty: 1</span></p>
+
+                <a href="">
+                  <button class="buy-again-btn button-primary">
+                    <i class="bx bx-history"></i> Buy again
+                  </button>
+                </a>
+              </div>
+              <div class="track-package">
+                <button>Track Package</button>
+              </div>
+            </div>
+            <div class="order-item">
+              <div class="order-item-image">
+                <img src="images/pizza.jpg" alt="hamburger" />
+              </div>
+              <div class="order-item-details">
+                <h2>Beef Hamburger</h2>
+                <p>Arriving on: 5 Mar, 2024</p>
+                <p>$27.00<span class="order-quantity">Qty: 2</span></p>
+
+                <a href="">
+                  <button class="button-primary">
+                    <i class="bx bx-history"></i> Buy again
+                  </button>
+                </a>
+              </div>
+              <div class="track-package">
+                <button>Track Package</button>
+              </div>
+            </div>
+            <!--dynamically add more order items here -->
+          </div>
+        </div>
+
+        <div class="order">
+          <div class="order-details">
+            <div>
+              Order Placed:
+              <span>25 feb, 2024</span>
+            </div>
+            <div class="order-total">
+              Order Total:
+              <span>$21.00</span>
+            </div>
+            <div>
+              Order Id:
+              <span>3ffg-fd4s-jk9s-8r5h-k21d-a245</span>
+            </div>
+          </div>
+          <div class="order-items">
+            <div class="order-item">
+              <div class="order-item-image">
+                <img src="images/fried-chicken.jpg" alt="fried chicken" />
+              </div>
+              <div class="order-item-details">
+                <h2>Fried Chicken x Veges</h2>
+                <p>Arriving on: 27 Feb, 2024</p>
+                <p>$21.00 <span class="order-quantity">Qty: 1</span></p>
+
+                <a href="">
+                  <button class="button-primary">
+                    <i class="bx bx-history"></i> Buy again
+                  </button>
+                </a>
+              </div>
+              <div class="track-package">
+                <button>Track Package</button>
+              </div>
+            </div>
+            <!-- dynamically add more order items here -->
+          </div>
+        </div>
+
+        <!-- dynamically add  more orders here -->
+      </section>
+    </main>
+  </body>
+</html>

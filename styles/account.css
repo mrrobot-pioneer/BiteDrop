@@ -1,0 +1,173 @@
+.account-container {
+  padding-bottom: 3rem;
+}
+
+.account-top {
+  background-color: var(--main-color);
+  max-width: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 60vh;
+}
+
+.user-icon {
+  font-size: 10rem;
+  color: white;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.user-email {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.authentication {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.signup,
+.login,
+.logout {
+  font-size: 1.2rem;
+  text-decoration: underline;
+  font-weight: 400;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.signup:hover,
+.login:hover,
+.logout:hover,
+.user-name:hover,
+.user-email:hover {
+  color: black;
+}
+
+.account-bottom {
+  margin-top: -10vh;
+  background-color: var(--bg-color);
+  border-radius: 0.5rem;
+  width: 95vw;
+  padding: 3rem 2vw;
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.links a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  gap: 1rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.icon {
+  font-size: 2.5rem;
+  position: relative;
+}
+
+.count {
+  position: absolute;
+  font-size: 1.2rem;
+  top: -1.2rem;
+  right: -1.2rem;
+  background-color: var(--main-color);
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.details {
+  max-width: 600px;
+  margin: 5rem auto 0 auto;
+}
+
+.details h3 {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.details div {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px dotted rgba(255, 255, 255, 0.5);
+}
+
+.details p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+}
+
+.edit-profile {
+  cursor: pointer;
+  width: fit-content;
+}
+
+.edit-profile i {
+  font-size: 2rem;
+}
+
+.edit-profile:hover {
+  color: var(--main-color);
+  text-decoration: underline;
+}
+
+.edit-profile-details {
+  margin: 2rem 0;
+}
+.hidden {
+  display: none;
+}
+
+.edit-profile-details label {
+  display: block;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.edit-profile-details input {
+  height: 2.5rem;
+  width: 100%;
+}
+
+.submit {
+  width: fit-content;
+  margin-top: 1rem;
+}
+
+.shipping-address h3 span {
+  font-size: 1.2rem;
+  text-decoration: underline;
+  cursor: pointer;
+  color: var(--main-color);
+  margin-left: 1rem;
+}
+
+li {
+  list-style: none;
+}
+
+li h4 {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  color: var(--main-color);
+}
